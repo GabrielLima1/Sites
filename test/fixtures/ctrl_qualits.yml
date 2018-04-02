@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cquality_value: 1.5
+  cquality_date: MyString
+  sub_cat_ctrl_qualit: one
+  product: one
+
+two:
+  cquality_value: 1.5
+  cquality_date: MyString
+  sub_cat_ctrl_qualit: two
+  product: two

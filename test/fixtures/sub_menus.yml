@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  smenu_name: MyString
+  smenu_status: false
+  menu: one
+
+two:
+  smenu_name: MyString
+  smenu_status: false
+  menu: two

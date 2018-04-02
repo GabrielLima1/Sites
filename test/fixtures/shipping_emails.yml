@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  semail_port: 1
+  semail_host: MyString
+  semail_ishtml: false
+  semail_mailer: MyString
+  semail_smtp_secure: MyString
+  semail_user: MyString
+  semail_pass: MyString
+  user: one
+
+two:
+  semail_port: 1
+  semail_host: MyString
+  semail_ishtml: false
+  semail_mailer: MyString
+  semail_smtp_secure: MyString
+  semail_user: MyString
+  semail_pass: MyString
+  user: two

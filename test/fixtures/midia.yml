@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  midia_name: MyString
+  midia_date: MyString
+  midia_url: MyString
+  type_midia: one
+
+two:
+  midia_name: MyString
+  midia_date: MyString
+  midia_url: MyString
+  type_midia: two

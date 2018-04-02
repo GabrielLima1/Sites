@@ -1,0 +1,2 @@
+class CatCtrlQuality < ApplicationRecord
+end

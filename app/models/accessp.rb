@@ -1,0 +1,2 @@
+class Accessp < ApplicationRecord
+end

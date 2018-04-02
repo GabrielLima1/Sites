@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_fname: MyString
+  user_lname: MyString
+  user_departament: MyString
+  compan: one
+  accessp: one
+
+two:
+  user_fname: MyString
+  user_lname: MyString
+  user_departament: MyString
+  compan: two
+  accessp: two

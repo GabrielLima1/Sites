@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fcontact_name: MyString
+  fcontact_mail: MyString
+  fcontact_tel: MyString
+  fcontact_cel: MyString
+  fcontact_hours: MyString
+  fcontact_status: false
+  midia: one
+  end_factor: one
+
+two:
+  fcontact_name: MyString
+  fcontact_mail: MyString
+  fcontact_tel: MyString
+  fcontact_cel: MyString
+  fcontact_hours: MyString
+  fcontact_status: false
+  midia: two
+  end_factor: two

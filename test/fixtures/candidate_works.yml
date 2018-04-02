@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cwork_fname: MyString
+  cwork_lname: MyString
+  cwork_cep: MyString
+  cwork_state: MyString
+  cwork_city: MyString
+  cwork_burgh: MyString
+  cwork_street: MyString
+  cwork_num: MyString
+  cwork_complement: MyString
+  cwork_gender: MyString
+  cwork_mail: MyString
+  cwork_tphone: MyString
+  cwork_cphone: MyString
+  work: one
+
+two:
+  cwork_fname: MyString
+  cwork_lname: MyString
+  cwork_cep: MyString
+  cwork_state: MyString
+  cwork_city: MyString
+  cwork_burgh: MyString
+  cwork_street: MyString
+  cwork_num: MyString
+  cwork_complement: MyString
+  cwork_gender: MyString
+  cwork_mail: MyString
+  cwork_tphone: MyString
+  cwork_cphone: MyString
+  work: two
