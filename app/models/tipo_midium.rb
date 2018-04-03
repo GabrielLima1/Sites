@@ -1,2 +1,0 @@
-class TipoMidium < ApplicationRecord
-end

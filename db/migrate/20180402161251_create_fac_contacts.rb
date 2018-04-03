@@ -7,7 +7,7 @@ class CreateFacContacts < ActiveRecord::Migration[5.1]
       t.string :fcontact_cel
       t.string :fcontact_hours
       t.boolean :fcontact_status
-      t.references :midia, foreign_key: true
+      t.references :archive, foreign_key: true
       t.references :end_factor, foreign_key: true
 
       t.timestamps

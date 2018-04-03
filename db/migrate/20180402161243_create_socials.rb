@@ -4,7 +4,7 @@ class CreateSocials < ActiveRecord::Migration[5.1]
       t.string :social_name
       t.string :social_link
       t.boolean :social_status
-      t.references :midia, foreign_key: true
+      t.references :archive, foreign_key: true
 
       t.timestamps
     end

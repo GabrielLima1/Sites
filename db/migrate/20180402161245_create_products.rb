@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :product_name
       t.text :product_description
       t.boolean :product_status
-      t.references :midia, foreign_key: true
+      t.references :archive, foreign_key: true
 
       t.timestamps
     end
