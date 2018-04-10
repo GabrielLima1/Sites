@@ -6,12 +6,13 @@ class AccountsController < ApplicationController
   end
 
   def create
-    nome = params["account"]["name"]
-    email = params["account"]["email"]
-    password = params["account"]["password"]
+    fnome = params["account"]["account_fname"]
+    lnome = params["account"]["account_lname"]
+    email = params["account"]["ac_email"]
+    password = params["account"]["ac_password"]
     #user = User.new(name: nome, email: email, password: password)
     #user.save
-    User.create(name: nome, email: email, password: password)
+    User.create(user_fname: fnome, user_lname: lnome, email: email, password: password)
     binding.pry
     @account = Account.create(account_params)
     respond_with @account
