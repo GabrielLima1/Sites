@@ -1,0 +1,2 @@
+class FacContactsController < ApplicationController
+end

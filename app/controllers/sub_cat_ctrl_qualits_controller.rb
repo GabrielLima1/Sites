@@ -1,0 +1,2 @@
+class SubCatCtrlQualitsController < ApplicationController
+end

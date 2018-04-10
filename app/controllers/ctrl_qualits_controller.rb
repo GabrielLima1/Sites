@@ -1,0 +1,2 @@
+class CtrlQualitsController < ApplicationController
+end

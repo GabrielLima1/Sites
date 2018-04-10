@@ -1,0 +1,2 @@
+class EndFactorsController < ApplicationController
+end

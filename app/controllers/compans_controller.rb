@@ -1,0 +1,2 @@
+class CompansController < ApplicationController
+end

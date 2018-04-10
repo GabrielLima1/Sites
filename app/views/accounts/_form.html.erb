@@ -1,0 +1,13 @@
+<%= simple_form_for @account, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :account_fname %>
+  <%= f.input :account_lname %>
+  <%= f.input :account_departament %>
+  <%= f.input :ac_email %>
+  <%= f.input :ac_password %>
+  <%= f.input :compan_id %>
+  <%= f.input :accessp_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                accounts_path, :class => 'btn btn-default' %>
+<% end %>

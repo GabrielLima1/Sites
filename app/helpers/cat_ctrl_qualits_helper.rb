@@ -1,0 +1,2 @@
+module CatCtrlQualitsHelper
+end

@@ -1,0 +1,2 @@
+module SubCatCtrlQualitsHelper
+end

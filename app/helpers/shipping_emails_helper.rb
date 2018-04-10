@@ -1,0 +1,2 @@
+module ShippingEmailsHelper
+end

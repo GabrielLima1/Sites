@@ -1,0 +1,2 @@
+class AccesspsController < ApplicationController
+end

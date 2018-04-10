@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_fname: MyString
+  account_lname: MyString
+  account_departament: MyString
+  ac_email: MyString
+  ac_password: MyString
+  compan: one
+  accessp: one
+
+two:
+  account_fname: MyString
+  account_lname: MyString
+  account_departament: MyString
+  ac_email: MyString
+  ac_password: MyString
+  compan: two
+  accessp: two
