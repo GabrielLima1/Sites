@@ -1,0 +1,2 @@
+class EndFactor < ApplicationRecord
+end

@@ -1,0 +1,10 @@
+<%= simple_form_for @compan, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :company_name %>
+  <%= f.input :company_description %>
+  <%= f.input :archive_id %>
+  <%= f.input :fac_contact_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                compans_path, :class => 'btn btn-default' %>
+<% end %>

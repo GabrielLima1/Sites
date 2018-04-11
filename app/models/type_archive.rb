@@ -1,0 +1,2 @@
+class TypeArchive < ApplicationRecord
+end

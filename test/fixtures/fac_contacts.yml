@@ -7,7 +7,7 @@ one:
   fcontact_cel: MyString
   fcontact_hours: MyString
   fcontact_status: false
-  midia: one
+  archive: one
   end_factor: one
 
 two:
@@ -17,5 +17,5 @@ two:
   fcontact_cel: MyString
   fcontact_hours: MyString
   fcontact_status: false
-  midia: two
+  archive: two
   end_factor: two

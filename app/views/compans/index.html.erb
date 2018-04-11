@@ -1,0 +1,44 @@
+<%- model_class = Compan -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:company_name) %></th>
+      <th><%= model_class.human_attribute_name(:company_description) %></th>
+      <th><%= model_class.human_attribute_name(:archive_id) %></th>
+      <th><%= model_class.human_attribute_name(:fac_contact_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @compans.each do |compan| %>
+      <tr>
+        <td><%= link_to compan.id, compan_path(compan) %></td>
+        <td><%= compan.company_name %></td>
+        <td><%= compan.company_description %></td>
+        <td><%= compan.archive_id %></td>
+        <td><%= compan.fac_contact_id %></td>
+        <td><%=l compan.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      compan_path(compan), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_compan_path(compan), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      compan_path(compan),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_compan_path,
+            :class => 'btn btn-primary' %>

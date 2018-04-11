@@ -4,10 +4,10 @@ one:
   social_name: MyString
   social_link: MyString
   social_status: false
-  midia: one
+  archive: one
 
 two:
   social_name: MyString
   social_link: MyString
   social_status: false
-  midia: two
+  archive: two

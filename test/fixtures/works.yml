@@ -3,11 +3,11 @@
 one:
   work_title: MyString
   work_description: MyText
-  end_factor: one
+  end_factory: one
   user: one
 
 two:
   work_title: MyString
   work_description: MyText
-  end_factor: two
+  end_factory: two
   user: two

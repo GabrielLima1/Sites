@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  archive_name: MyString
+  archive_date: MyString
+  archive_url: MyString
+  type_archive: one
+
+two:
+  archive_name: MyString
+  archive_date: MyString
+  archive_url: MyString
+  type_archive: two

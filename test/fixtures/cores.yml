@@ -3,13 +3,13 @@
 one:
   core_title: MyString
   core_description: MyText
-  midia: one
+  archive: one
   menu: one
   user: one
 
 two:
   core_title: MyString
   core_description: MyText
-  midia: two
+  archive: two
   menu: two
   user: two
