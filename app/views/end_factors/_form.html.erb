@@ -1,0 +1,14 @@
+<%= simple_form_for @end_factor, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :efactory_state %>
+  <%= f.input :efactory_city %>
+  <%= f.input :efactory_burgh %>
+  <%= f.input :efactory_street %>
+  <%= f.input :efactory_zipcode %>
+  <%= f.input :efactory_longitude %>
+  <%= f.input :efactory_latitude %>
+  <%= f.input :end_factory_num %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                end_factors_path, :class => 'btn btn-default' %>
+<% end %>

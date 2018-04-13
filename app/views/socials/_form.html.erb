@@ -1,0 +1,10 @@
+<%= simple_form_for @social, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :social_name %>
+  <%= f.input :social_link %>
+  <%= f.input :social_status %>
+  <%= f.input :archive_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                socials_path, :class => 'btn btn-default' %>
+<% end %>

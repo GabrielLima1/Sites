@@ -1,0 +1,38 @@
+<%- model_class = CatCtrlQualit -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:ccquality_name) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cat_ctrl_qualits.each do |cat_ctrl_qualit| %>
+      <tr>
+        <td><%= link_to cat_ctrl_qualit.id, cat_ctrl_qualit_path(cat_ctrl_qualit) %></td>
+        <td><%= cat_ctrl_qualit.ccquality_name %></td>
+        <td><%=l cat_ctrl_qualit.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      cat_ctrl_qualit_path(cat_ctrl_qualit), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_cat_ctrl_qualit_path(cat_ctrl_qualit), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      cat_ctrl_qualit_path(cat_ctrl_qualit),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_cat_ctrl_qualit_path,
+            :class => 'btn btn-primary' %>

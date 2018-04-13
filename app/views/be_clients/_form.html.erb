@@ -1,0 +1,16 @@
+<%= simple_form_for @be_client, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :client_company_name %>
+  <%= f.input :client_cnpj %>
+  <%= f.input :client_contact_name %>
+  <%= f.input :client_mail %>
+  <%= f.input :client_state %>
+  <%= f.input :client_city %>
+  <%= f.input :client_tphone %>
+  <%= f.input :client_cphone %>
+  <%= f.input :client_came_to_us %>
+  <%= f.input :shipping_email_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                be_clients_path, :class => 'btn btn-default' %>
+<% end %>

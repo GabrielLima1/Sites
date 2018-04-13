@@ -1,0 +1,14 @@
+<%= simple_form_for @shipping_email, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :semail_port %>
+  <%= f.input :semail_host %>
+  <%= f.input :semail_ishtml %>
+  <%= f.input :semail_mailer %>
+  <%= f.input :semail_smtp_secure %>
+  <%= f.input :semail_user %>
+  <%= f.input :semail_pass %>
+  <%= f.input :user_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                shipping_emails_path, :class => 'btn btn-default' %>
+<% end %>

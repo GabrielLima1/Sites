@@ -1,0 +1,52 @@
+<%- model_class = ShippingEmail -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:semail_port) %></th>
+      <th><%= model_class.human_attribute_name(:semail_host) %></th>
+      <th><%= model_class.human_attribute_name(:semail_ishtml) %></th>
+      <th><%= model_class.human_attribute_name(:semail_mailer) %></th>
+      <th><%= model_class.human_attribute_name(:semail_smtp_secure) %></th>
+      <th><%= model_class.human_attribute_name(:semail_user) %></th>
+      <th><%= model_class.human_attribute_name(:semail_pass) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shipping_emails.each do |shipping_email| %>
+      <tr>
+        <td><%= link_to shipping_email.id, shipping_email_path(shipping_email) %></td>
+        <td><%= shipping_email.semail_port %></td>
+        <td><%= shipping_email.semail_host %></td>
+        <td><%= shipping_email.semail_ishtml %></td>
+        <td><%= shipping_email.semail_mailer %></td>
+        <td><%= shipping_email.semail_smtp_secure %></td>
+        <td><%= shipping_email.semail_user %></td>
+        <td><%= shipping_email.semail_pass %></td>
+        <td><%= shipping_email.user_id %></td>
+        <td><%=l shipping_email.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      shipping_email_path(shipping_email), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_shipping_email_path(shipping_email), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      shipping_email_path(shipping_email),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_shipping_email_path,
+            :class => 'btn btn-primary' %>

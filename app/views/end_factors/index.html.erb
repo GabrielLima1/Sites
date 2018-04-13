@@ -1,0 +1,52 @@
+<%- model_class = EndFactor -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:efactory_state) %></th>
+      <th><%= model_class.human_attribute_name(:efactory_city) %></th>
+      <th><%= model_class.human_attribute_name(:efactory_burgh) %></th>
+      <th><%= model_class.human_attribute_name(:efactory_street) %></th>
+      <th><%= model_class.human_attribute_name(:efactory_zipcode) %></th>
+      <th><%= model_class.human_attribute_name(:efactory_longitude) %></th>
+      <th><%= model_class.human_attribute_name(:efactory_latitude) %></th>
+      <th><%= model_class.human_attribute_name(:end_factory_num) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @end_factors.each do |end_factor| %>
+      <tr>
+        <td><%= link_to end_factor.id, end_factor_path(end_factor) %></td>
+        <td><%= end_factor.efactory_state %></td>
+        <td><%= end_factor.efactory_city %></td>
+        <td><%= end_factor.efactory_burgh %></td>
+        <td><%= end_factor.efactory_street %></td>
+        <td><%= end_factor.efactory_zipcode %></td>
+        <td><%= end_factor.efactory_longitude %></td>
+        <td><%= end_factor.efactory_latitude %></td>
+        <td><%= end_factor.end_factory_num %></td>
+        <td><%=l end_factor.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      end_factor_path(end_factor), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_end_factor_path(end_factor), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      end_factor_path(end_factor),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_end_factor_path,
+            :class => 'btn btn-primary' %>

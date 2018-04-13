@@ -1,0 +1,8 @@
+<%= simple_form_for @sub_cat_ctrl_qualit, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :sccquality_name %>
+  <%= f.input :cat_ctrl_qualit_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                sub_cat_ctrl_qualits_path, :class => 'btn btn-default' %>
+<% end %>

@@ -1,0 +1,33 @@
+<%- model_class = ShippingEmail -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:semail_port) %>:</strong></dt>
+  <dd><%= @shipping_email.semail_port %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:semail_host) %>:</strong></dt>
+  <dd><%= @shipping_email.semail_host %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:semail_ishtml) %>:</strong></dt>
+  <dd><%= @shipping_email.semail_ishtml %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:semail_mailer) %>:</strong></dt>
+  <dd><%= @shipping_email.semail_mailer %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:semail_smtp_secure) %>:</strong></dt>
+  <dd><%= @shipping_email.semail_smtp_secure %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:semail_user) %>:</strong></dt>
+  <dd><%= @shipping_email.semail_user %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:semail_pass) %>:</strong></dt>
+  <dd><%= @shipping_email.semail_pass %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @shipping_email.user_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              shipping_emails_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_shipping_email_path(@shipping_email), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              shipping_email_path(@shipping_email),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

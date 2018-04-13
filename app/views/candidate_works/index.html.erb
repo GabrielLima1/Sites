@@ -1,0 +1,64 @@
+<%- model_class = CandidateWork -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_fname) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_lname) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_cep) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_state) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_city) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_burgh) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_street) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_num) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_complement) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_gender) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_mail) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_tphone) %></th>
+      <th><%= model_class.human_attribute_name(:cwork_cphone) %></th>
+      <th><%= model_class.human_attribute_name(:work_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @candidate_works.each do |candidate_work| %>
+      <tr>
+        <td><%= link_to candidate_work.id, candidate_work_path(candidate_work) %></td>
+        <td><%= candidate_work.cwork_fname %></td>
+        <td><%= candidate_work.cwork_lname %></td>
+        <td><%= candidate_work.cwork_cep %></td>
+        <td><%= candidate_work.cwork_state %></td>
+        <td><%= candidate_work.cwork_city %></td>
+        <td><%= candidate_work.cwork_burgh %></td>
+        <td><%= candidate_work.cwork_street %></td>
+        <td><%= candidate_work.cwork_num %></td>
+        <td><%= candidate_work.cwork_complement %></td>
+        <td><%= candidate_work.cwork_gender %></td>
+        <td><%= candidate_work.cwork_mail %></td>
+        <td><%= candidate_work.cwork_tphone %></td>
+        <td><%= candidate_work.cwork_cphone %></td>
+        <td><%= candidate_work.work_id %></td>
+        <td><%=l candidate_work.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      candidate_work_path(candidate_work), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_candidate_work_path(candidate_work), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      candidate_work_path(candidate_work),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_candidate_work_path,
+            :class => 'btn btn-primary' %>

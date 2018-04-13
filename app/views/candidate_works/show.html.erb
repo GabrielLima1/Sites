@@ -1,0 +1,45 @@
+<%- model_class = CandidateWork -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:cwork_fname) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_fname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_lname) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_lname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_cep) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_cep %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_state) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_state %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_city) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_city %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_burgh) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_burgh %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_street) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_street %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_num) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_num %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_complement) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_complement %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_gender) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_gender %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_mail) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_mail %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_tphone) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_tphone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cwork_cphone) %>:</strong></dt>
+  <dd><%= @candidate_work.cwork_cphone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:work_id) %>:</strong></dt>
+  <dd><%= @candidate_work.work_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              candidate_works_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_candidate_work_path(@candidate_work), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              candidate_work_path(@candidate_work),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

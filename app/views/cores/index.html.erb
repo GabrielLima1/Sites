@@ -1,0 +1,46 @@
+<%- model_class = Core -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:core_title) %></th>
+      <th><%= model_class.human_attribute_name(:core_description) %></th>
+      <th><%= model_class.human_attribute_name(:archive_id) %></th>
+      <th><%= model_class.human_attribute_name(:menu_id) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cores.each do |core| %>
+      <tr>
+        <td><%= link_to core.id, core_path(core) %></td>
+        <td><%= core.core_title %></td>
+        <td><%= core.core_description %></td>
+        <td><%= core.archive_id %></td>
+        <td><%= core.menu_id %></td>
+        <td><%= core.user_id %></td>
+        <td><%=l core.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      core_path(core), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_core_path(core), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      core_path(core),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_core_path,
+            :class => 'btn btn-primary' %>

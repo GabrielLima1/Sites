@@ -1,0 +1,11 @@
+<%= simple_form_for @core, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :core_title %>
+  <%= f.input :core_description %>
+  <%= f.input :archive_id %>
+  <%= f.input :menu_id %>
+  <%= f.input :user_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                cores_path, :class => 'btn btn-default' %>
+<% end %>

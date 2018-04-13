@@ -1,0 +1,37 @@
+<%- model_class = BeClient -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:client_company_name) %>:</strong></dt>
+  <dd><%= @be_client.client_company_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_cnpj) %>:</strong></dt>
+  <dd><%= @be_client.client_cnpj %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_contact_name) %>:</strong></dt>
+  <dd><%= @be_client.client_contact_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_mail) %>:</strong></dt>
+  <dd><%= @be_client.client_mail %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_state) %>:</strong></dt>
+  <dd><%= @be_client.client_state %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_city) %>:</strong></dt>
+  <dd><%= @be_client.client_city %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_tphone) %>:</strong></dt>
+  <dd><%= @be_client.client_tphone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_cphone) %>:</strong></dt>
+  <dd><%= @be_client.client_cphone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:client_came_to_us) %>:</strong></dt>
+  <dd><%= @be_client.client_came_to_us %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:shipping_email_id) %>:</strong></dt>
+  <dd><%= @be_client.shipping_email_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              be_clients_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_be_client_path(@be_client), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              be_client_path(@be_client),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

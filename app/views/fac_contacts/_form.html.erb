@@ -1,0 +1,14 @@
+<%= simple_form_for @fac_contact, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :fcontact_name %>
+  <%= f.input :fcontact_mail %>
+  <%= f.input :fcontact_tel %>
+  <%= f.input :fcontact_cel %>
+  <%= f.input :fcontact_hours %>
+  <%= f.input :fcontact_status %>
+  <%= f.input :archive_id %>
+  <%= f.input :end_factor_id %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                fac_contacts_path, :class => 'btn btn-default' %>
+<% end %>
