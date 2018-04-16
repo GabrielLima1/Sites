@@ -1,50 +1,50 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Mizu</title>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>Mizu</title>
+    <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <link rel="icon" type="image/png" href="img3.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico:400italic,600italic,700italic,400,600,700">
-</head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="icon" type="image/png" href="img3.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico:400italic,600italic,700italic,400,600,700">
+  </head>
 
-<body>
-  <header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand logo" href="/">Home</a>
-        </div>
-        <% if current_user %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/insta_users"><span class="glyphicon glyphicon-user"></span> Contas Instagram</a></li>
-          <li><a href="/insta_runs"><span class="glyphicon glyphicon-fire"></span> Execuções Insta</a></li>
-          <li class="active"><%= link_to 'Logout', destroy_user_session_path,:method => :delete%></li>
-        </ul>
-        <% else %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
-          <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-        <% end %>
-      </div> <!--FIM DIV CONTAINER-->
-    </nav>
-  </header>
+  <body>
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="/">Home</a>
+          </div>
+          <% if current_user %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/insta_users"><span class="glyphicon glyphicon-user"></span> Contas Instagram</a></li>
+            <li><a href="/insta_runs"><span class="glyphicon glyphicon-fire"></span> Execuções Insta</a></li>
+            <li class="active"><%= link_to 'Logout', destroy_user_session_path,:method => :delete%></li>
+          </ul>
+          <% else %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
+            <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+          <% end %>
+        </div> <!--FIM DIV CONTAINER-->
+      </nav>
+    </header>
 
-  <div class="container"><br><br><br>
-    <%= yield %><!--/row-->
-    <footer>
-      <p>&copy; Gabriel Lima &copy;</p>
-    </footer>
-  </div> <!-- /container -->
-</body>
+    <div class="container"><br><br><br>
+      <%= yield %><!--/row-->
+      <footer>
+        <p>&copy; Gabriel Lima &copy;</p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
 </html>
