@@ -3,7 +3,7 @@
 	    <h1 class="logo">Fala ae</h1>
 	    <h2 >Home</h2>
 	   <% if current_user %>
-	      <h4>Você está logado</h4>
+	      <h4>Você está logado<%= current_user.user_fname%></h4>
 	   <%else%>
 	      <h4 style="color:red;">Faça Login Para Pode Usar!</h4>
 	    <%end%>
