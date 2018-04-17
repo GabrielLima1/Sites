@@ -1,8 +1,9 @@
 <%= simple_form_for @compan, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :company_name %>
   <%= f.input :company_description %>
-  <%= f.input :archive_id %>
-  <%= f.input :fac_contact_id %>
+  <%= f.association :archive, label_method: :archive_name %>
+  <!-- <%= f.association :archive, include_blank: false, collection: Archive.all, prompt: "Choose a Company" %> -->
+  <%= f.association :fac_contact, label_method: :fcontact_name %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

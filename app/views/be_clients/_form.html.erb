@@ -8,7 +8,7 @@
   <%= f.input :client_tphone %>
   <%= f.input :client_cphone %>
   <%= f.input :client_came_to_us %>
-  <%= f.input :shipping_email_id %>
+  <%= f.association :shipping_email, include_blank: false %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

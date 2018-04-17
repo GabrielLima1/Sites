@@ -1,7 +1,7 @@
 <%= simple_form_for @app_product, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :aproduct_status %>
-  <%= f.input :product_id %>
-  <%= f.input :app_id %>
+  <%= f.input :aproduct_status, collection: [ "NEUTRO", "IDEAL", "NÃO INDICADO"], include_blank: false %>
+  <%= f.association :product,  label_method: :product_name, include_blank: false %>
+  <%= f.association :app, label_method: :app_name, include_blank: false %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

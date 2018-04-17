@@ -27,10 +27,8 @@ class AppProductsController < ApplicationController
   end
 
   def index
-    # if current_user.kind == "manager"
-      @app_products = AppProduct.paginate(:page => params[:page], :per_page => 10)
-                          .order(created_at: :asc)
-    # end
+    @app_products = AppProduct.paginate(:page => params[:page], :per_page => 10)
+                                       .order(created_at: :asc)
   end
 
 

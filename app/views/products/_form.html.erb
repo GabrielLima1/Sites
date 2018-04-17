@@ -2,7 +2,7 @@
   <%= f.input :product_name %>
   <%= f.input :product_description %>
   <%= f.input :product_status %>
-  <%= f.input :archive_id %>
+  <%= f.association :archive, label_method: :archive_name %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

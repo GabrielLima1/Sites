@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :compans
   resources :accessps
 
-  resources :app_produtcs
+  resources :app_products
   resources :apps
   resources :archives
   resources :be_clients
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   resources :sub_menus
   resources :type_archives
   resources :works
-  
+
   # Para Adcionar um novo recurso use 'resources :nome_recurso_no_plural' sem aspas
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

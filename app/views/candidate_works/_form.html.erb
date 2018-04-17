@@ -1,4 +1,4 @@
-<%= simple_form_for @candidate_work, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @candidade_work, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :cwork_fname %>
   <%= f.input :cwork_lname %>
   <%= f.input :cwork_cep %>
@@ -12,7 +12,7 @@
   <%= f.input :cwork_mail %>
   <%= f.input :cwork_tphone %>
   <%= f.input :cwork_cphone %>
-  <%= f.input :work_id %>
+  <%= f.association :work, include_blank: false %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

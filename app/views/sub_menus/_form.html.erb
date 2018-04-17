@@ -1,7 +1,7 @@
 <%= simple_form_for @sub_menu, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :smenu_name %>
   <%= f.input :smenu_status %>
-  <%= f.input :menu_id %>
+  <%= f.association :menu, label_method: :menu_name %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
