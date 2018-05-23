@@ -26,8 +26,8 @@
           </div>
           <% if current_user %>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/insta_users"><span class="glyphicon glyphicon-user"></span> Contas Instagram</a></li>
-            <li><a href="/insta_runs"><span class="glyphicon glyphicon-fire"></span> Execuções Insta</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Contas Instagram</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-fire"></span> Execuções Insta</a></li>
             <li class="active"><%= link_to 'Logout', destroy_user_session_path,:method => :delete%></li>
           </ul>
           <% else %>
@@ -43,7 +43,7 @@
     <div class="container"><br><br><br>
       <%= yield %><!--/row-->
       <footer>
-        <p>&copy; Gabriel Lima &copy;</p>
+        <p>&copy; Mizu LTDA 2018</p>
       </footer>
     </div> <!-- /container -->
   </body>
