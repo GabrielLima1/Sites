@@ -8,6 +8,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="icon" type="image/png" href="img3.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico:400italic,600italic,700italic,400,600,700">
   </head>
 
@@ -24,17 +26,44 @@
             </button>
             <a class="navbar-brand logo" href="/">Home</a>
           </div>
-          <% if current_user %> 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Contas Instagram</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-fire"></span> Execuções Insta</a></li>
-            <li class="active"><%= link_to 'Logout', destroy_user_session_path,:method => :delete%></li>
-          </ul>
+          <% if current_user %>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Accounts", accounts_path %></li>
+                  <li><%= link_to "App_Products", app_products_path %></li>
+                  <li><%= link_to "App", apps_path %></li>
+                  <li><%= link_to "Archives", archives_path %></li>
+                  <li><%= link_to "Be_Clients", be_clients_path %></li>
+                  <li><%= link_to "Candidate Work", candidate_works_path %></li>
+                  <li><%= link_to "Cat Ctrl Qualits", cat_ctrl_qualits_path %></li>
+                  <li><%= link_to "Compans", compans_path %></li>
+                  <li><%= link_to "Cores", cores_path %></li>
+                  <li><%= link_to "Ctrl Qualits", ctrl_qualits_path %></li>
+                  <li><%= link_to "End Factors", end_factors_path %></li>
+                  <li><%= link_to "Fac Contacts", fac_contacts_path %></li>
+                  <li><%= link_to "Menus", menus_path %></li>
+                  <li><%= link_to "Products", products_path %></li>
+                  <li><%= link_to "Shipping Email", shipping_emails_path %></li>
+                  <li><%= link_to "Social", socials_path %></li>
+                  <li><%= link_to "Sub Cat Ctrl Qualit", sub_cat_ctrl_qualits_path %></li>
+                  <li><%= link_to "Sub Menus", sub_menus_path %></li>
+                  <li><%= link_to "Type Archives", type_archives_path %></li>
+                  <li><%= link_to "Works", works_path %></li>
+                  <li role="separator" class="divider"></li>
+                  <!-- <li class="dropdown-header">Nav header</li> -->
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li class="active"><%= link_to 'Logout', destroy_user_session_path,:method => :delete%></li>
+            </ul>
           <% else %>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
-            <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Cadastre-se</a></li>
+              <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
           <% end %>
         </div> <!--FIM DIV CONTAINER-->
       </nav>

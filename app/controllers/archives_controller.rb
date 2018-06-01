@@ -1,4 +1,4 @@
-class ArchivesController < ArchivelicationController
+class ArchivesController < ApplicationController
   before_action :set_archive, only: [:edit, :update, :show, :destroy]
 
   def new
@@ -27,10 +27,7 @@ class ArchivesController < ArchivelicationController
   end
 
   def index
-    # if current_user.kind == "manager"
-      @archives = Archive.paginate(:page => params[:page], :per_page => 10)
-                          .order(created_at: :asc)
-    # end
+      @archives = Archive.all
   end
 
 

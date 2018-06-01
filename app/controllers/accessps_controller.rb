@@ -27,10 +27,8 @@ class AccesspsController < ApplicationController
   end
 
   def index
-    # if current_user.kind == "manager"
       @accessps = Accessp.paginate(:page => params[:page], :per_page => 10)
-                          .order(created_at: :asc)
-    # end
+                         .order(created_at: :asc)
   end
 
 
