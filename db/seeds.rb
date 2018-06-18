@@ -35,3 +35,9 @@ User.create(email: "thiago.griao@mizu.com.br",      password: 123456 ,user_fname
             user_lname: "Suporte", user_departament: "TI", accessp_id: 1, compan_id: 1)
 User.create(email: "gabriel.pereira@mizu.com.br",   password: 123456 ,user_fname: "Gabriel",
             user_lname: "Suporte", user_departament: "TI", accessp_id: 1, compan_id: 1)
+
+# CRIANDO DOIS USUARIOS DEFAULT
+Account.create(email: "thiago.griao@mizu.com.br",      password: 123456 ,user_fname: "Thiago",
+            user_lname: "Suporte", user_departament: "TI", accessp_id: 1, compan_id: 1)
+Account.create(email: "gabriel.pereira@mizu.com.br",   password: 123456 ,user_fname: "Gabriel",
+            user_lname: "Suporte", user_departament: "TI", accessp_id: 1, compan_id: 1)

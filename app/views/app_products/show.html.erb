@@ -7,9 +7,9 @@
   <dt><strong><%= model_class.human_attribute_name(:aproduct_status) %>:</strong></dt>
   <dd><%= @app_product.aproduct_status %></dd>
   <dt><strong><%= model_class.human_attribute_name(:product_id) %>:</strong></dt>
-  <dd><%= @app_product.product_id %></dd>
+  <dd><%= @app_product.product.product_name%></dd>
   <dt><strong><%= model_class.human_attribute_name(:app_id) %>:</strong></dt>
-  <dd><%= @app_product.app_id %></dd>
+  <dd><%= @app_product.app.app_name %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

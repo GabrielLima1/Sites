@@ -18,8 +18,8 @@
       <tr>
         <td><%= link_to app_product.id, app_product_path(app_product) %></td>
         <td><%= app_product.aproduct_status %></td>
-        <td><%= app_product.product_id %></td>
-        <td><%= app_product.app_id %></td>
+        <td><%= app_product.product.product_name %></td>
+        <td><%= app_product.app.app_name %></td>
         <td><%=l app_product.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

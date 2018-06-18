@@ -5,4 +5,6 @@ class Archive < ApplicationRecord
   has_many :fac_contacts
   has_many :products
   has_many :socials
+
+  # mount_uploader :archive_url, ArchiveUrlUploader
 end

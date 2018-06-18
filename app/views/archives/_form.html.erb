@@ -2,7 +2,7 @@
   <%= f.input :archive_name %>
   <%= f.input :archive_date %>
   <%= f.input :archive_url %>
-  <%= f.association :type_archive, include_blank: false %>
+  <%= f.association :type_archive, label_method: :tarchive_name, include_blank: false %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
